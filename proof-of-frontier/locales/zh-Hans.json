@@ -1,0 +1,259 @@
+{
+  "common": {
+    "brand": "NICECHUNK",
+    "language": "语言",
+    "comingSoon": "即将开放",
+    "languageNative": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "de": "Deutsch",
+      "ja": "日本語",
+      "ru": "Русский",
+      "ko": "한국어",
+      "zhHant": "繁體中文",
+      "zhHans": "简体中文"
+    }
+  },
+  "proofOfFrontier": {
+    "meta": {
+      "title": "短种子证明 | NiceChunk"
+    },
+    "common": {
+      "yes": "是",
+      "no": "否"
+    },
+    "nav": {
+      "aria": "主导航",
+      "home": "首页",
+      "roadbook": "路书",
+      "worldRules": "世界规则",
+      "resources": "资源",
+      "elements": "元素表",
+      "fairness": "公平模型",
+      "proofOfFrontier": "证明",
+      "docs": "文档",
+      "enterWorld": "进入世界",
+      "guardians": "守护者"
+    },
+    "hero": {
+      "eyebrow": "NiceChunk Proof of Short Seed",
+      "title": "短种子证明",
+      "subtitle": "矿工竞争为当前世界轮廓寻找最短的有效种子。",
+      "body": "在 NiceChunk 中，当前世界轮廓会被标准化为一个 Frontier Root。矿工需要寻找一个可以还原该轮廓的 Shape Seed。Seed 越短，说明它对世界轮廓的描述越高效。每一轮中，谁最先提交一个长度小于当前难度限制、并且能正确还原轮廓的 Seed，谁就完成出块并获得奖励。"
+    },
+    "concepts": {
+      "aria": "核心理念",
+      "boundary": {
+        "title": "前沿目标",
+        "body": "当前世界轮廓会被标准化成 target_frontier_root。"
+      },
+      "context": {
+        "title": "短种子开采",
+        "body": "矿工竞争寻找一个足够短的 Shape Seed 来还原当前轮廓。"
+      },
+      "meaningful": {
+        "title": "第一次有效胜利",
+        "body": "谁最先提交通过验证的 Seed，谁完成本轮出块并获得模拟奖励。"
+      },
+      "tiny": {
+        "title": "自动重定向",
+        "body": "系统每分钟根据出块速度自动调整 max_seed_bytes。"
+      }
+    },
+    "demo": {
+      "aria": "短种子证明演示"
+    },
+    "grid": {
+      "eyebrow": "世界网格",
+      "title": "当前轮廓目标",
+      "legend": "地图图例",
+      "unlocked": "已解锁",
+      "candidate": "候选",
+      "selected": "已选择",
+      "canvas": "短种子证明网格"
+    },
+    "steps": {
+      "genesis": "创世 Chunk",
+      "find": "寻找候选 Chunk",
+      "select": "搜索 Seed",
+      "mine": "验证",
+      "update": "完成出块"
+    },
+    "panel": {
+      "aria": "算法状态",
+      "selected": {
+        "title": "选择Chunk",
+        "coords": "坐标",
+        "status": "状态",
+        "neighbors": "已解锁邻居",
+        "reward": "预估奖励"
+      },
+      "seed": {
+        "title": "短种子开采",
+        "epoch": "当前 Epoch",
+        "targetRoot": "目标 Frontier Root",
+        "maxSeedBytes": "最大种子字节",
+        "rawSeedBytes": "RAW 兜底字节",
+        "candidateBytes": "候选 Seed 字节",
+        "lastCalculations": "本次结果计算次数",
+        "currentEpochCalculations": "当前轮计算次数",
+        "bestBytes": "已接受最短 Seed 字节",
+        "blocksLastMinute": "最近一分钟出块",
+        "lastBlockAge": "上次出块距今",
+        "nextRetarget": "下次调难倒计时",
+        "difficultyStatus": "难度状态",
+        "stuckMinutes": "连续卡住分钟",
+        "miningStatus": "搜索状态",
+        "status": "难度状态"
+      },
+      "candidate": {
+        "title": "候选种子",
+        "encoding": "编码",
+        "decodedRoot": "反解 Root",
+        "rootValid": "Root 匹配",
+        "lengthValid": "长度合格",
+        "canonical": "规范格式",
+        "seed": "Shape Seed"
+      },
+      "keys": {
+        "title": "邻居钥匙"
+      },
+      "context": {
+        "title": "邻居上下文",
+        "note": "由 N/E/S/W 四个方向的已解锁 Chunk Key 按固定顺序计算得出。"
+      },
+      "pow": {
+        "title": "工作证明",
+        "difficultyAria": "演示难度",
+        "easy": "简单",
+        "normal": "普通",
+        "hard": "困难",
+        "nonce": "随机数",
+        "target": "目标",
+        "attempts": "尝试次数",
+        "rate": "模拟算力",
+        "currentHash": "当前 Hash",
+        "status": "状态"
+      },
+      "newKey": {
+        "title": "新 Chunk 密钥"
+      }
+    },
+    "actions": {
+      "randomMine": "随机挖矿",
+      "growWorld": "扩张世界",
+      "reset": "重置世界",
+      "startSearch": "开始搜索",
+      "searchOne": "搜索一个候选",
+      "submitCandidate": "提交候选 Seed",
+      "autoRun": "自动运行",
+      "autoSolve": "自动尝试提交",
+      "retargetNow": "立即调难",
+      "resetDifficulty": "重置难度",
+      "startMining": "开始挖矿",
+      "stop": "停止",
+      "mineStep": "单步计算",
+      "autoExpand": "自动扩张",
+      "stopAuto": "停止自动扩张",
+      "decodeSeed": "反解 Contour Seed",
+      "copySeed": "复制 Seed",
+      "copyState": "复制状态 JSON",
+      "showLog": "显示交易日志",
+      "hideLog": "隐藏交易日志"
+    },
+    "worldState": {
+      "title": "世界状态",
+      "unlocked": "已解锁 Chunk",
+      "candidates": "候选 Chunk",
+      "perimeter": "轮廓边数",
+      "frontierRoot": "Frontier Root",
+      "contourSeed": "Contour Seed",
+      "seedBytes": "Seed 字节",
+      "seedAttempts": "Seed 搜索次数",
+      "avgBlockTime": "平均出块时间",
+      "nextRetarget": "下次调难",
+      "nextRetargetValue": "还差 {count} 个区块",
+      "seedTargetValue": "左侧更难：最大 {max} 字节 / RAW {raw} 字节",
+      "difficulty": "当前难度"
+    },
+    "contour": {
+      "title": "轮廓编码",
+      "body": "DecodeShapeSeed v1 支持 RAW_EDGES、PATH_RLE 和 RECT。RAW_EDGES 是兜底编码：当 max_seed_bytes 放宽到 RAW 长度时，任意有限轮廓都一定可解。",
+      "path": "简化轮廓路径",
+      "seed": "压缩后的 Contour Seed",
+      "seedLength": "{bytes} 字节，目标 <= {target} 字节",
+      "pasteSeed": "粘贴 Contour Seed 进行反解",
+      "pastePlaceholder": "在这里粘贴 NSS1|RAW|...、NSS1|PATH|... 或 NSS1|RECT|...。"
+    },
+    "formulas": {
+      "eyebrow": "NPoSS 公式",
+      "title": "seed_bytes <= max_seed_bytes",
+      "body": "演示不证明 Seed 是全世界最短，只证明它能还原当前 Frontier Root、格式规范，并且长度小于当前 max_seed_bytes 难度限制。"
+    },
+    "advanced": {
+      "eyebrow": "高级协议说明",
+      "title": "正式协议使用 commit-reveal",
+      "body": "演示页为了清晰直接 reveal Seed。正式协议应先提交 commit_hash，再在短暂延迟后 reveal seed 和 salt，避免别人复制有效 Seed 抢先提交。"
+    },
+    "transactions": {
+      "eyebrow": "模拟交易日志",
+      "title": "SeedBlock 事件",
+      "empty": "还没有 Seed 区块。搜索并提交有效 Seed 后会完成第一个 epoch。",
+      "nonce": "随机数",
+      "powHash": "pow_hash",
+      "chunkKey": "chunk_key",
+      "frontierRoot": "frontier_root",
+      "blockTime": "block_time",
+      "seedTarget": "种子目标"
+    },
+    "difficultyStatus": {
+      "hardening": "硬化",
+      "stable": "稳定",
+      "relaxing": "放松",
+      "guaranteed_solvable": "保证可解决"
+    },
+    "encoding": {
+      "RAW_EDGES": "RAW_EDGES",
+      "PATH_RLE": "PATH_RLE",
+      "RECT": "RECT",
+      "UNION": "UNION"
+    },
+    "directions": {
+      "north": "北",
+      "east": "东",
+      "south": "南",
+      "west": "西"
+    },
+    "chunkStatus": {
+      "locked": "锁定",
+      "candidate": "候选人",
+      "unlocked": "解锁"
+    },
+    "status": {
+      "idle": "空闲",
+      "mining": "采矿",
+      "searching": "搜索",
+      "autoRunning": "自动运行中：持续搜索并提交有效 Seed。",
+      "stopped": "停止",
+      "valid": "找到有效种子",
+      "noValidSeed": "当前 max_seed_bytes 下没有有效 Seed。",
+      "noCandidate": "请先搜索一个候选 Seed",
+      "rootMismatch": "种子不会重建当前边界。",
+      "nonCanonical": "种子不是规范的。",
+      "notCandidate": "请先选择候选 Chunk",
+      "seedTooLong": "种子有效，但对于当前难度而言太长。",
+      "relaxed": "连续 10 分钟无新区块，Seed 长度目标已自动放宽。"
+    },
+    "messages": {
+      "locked": "此 chunk 没有未锁定的邻居。 边界证明需要至少一个已确认的邻居密钥。",
+      "unlocked": "此 chunk 已解锁。 它的密钥现在可以被相邻的 chunks 使用。",
+      "candidate": "这个 chunk 可以被开采，因为它触及当前的世界边境。",
+      "decoded": "已从 Contour Seed 反解出 {count} 条边界边，并在地图上高亮显示。",
+      "invalidSeed": "这个 Contour Seed 无法反解，请粘贴有效的 nckc_ Seed。",
+      "seedCopied": "Contour Seed 已复制。",
+      "stateCopied": "世界状态 JSON 已复制。",
+      "copyFailed": "当前浏览器环境无法复制。"
+    }
+  }
+}

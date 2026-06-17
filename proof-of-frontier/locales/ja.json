@@ -1,0 +1,259 @@
+{
+  "common": {
+    "brand": "NICECHUNK",
+    "language": "言語",
+    "languageNative": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "de": "Deutsch",
+      "ja": "日本語",
+      "ru": "Русский",
+      "ko": "한국어",
+      "zhHant": "繁體中文",
+      "zhHans": "简体中文"
+    },
+    "comingSoon": "近日公開予定"
+  },
+  "proofOfFrontier": {
+    "meta": {
+      "title": "Proof of Short Seed | NiceChunk"
+    },
+    "common": {
+      "yes": "はい",
+      "no": "いいえ"
+    },
+    "nav": {
+      "aria": "プライマリナビゲーション",
+      "home": "ホーム",
+      "roadbook": "ロードブック",
+      "worldRules": "世界ルール",
+      "resources": "リソース",
+      "elements": "要素",
+      "fairness": "公平性",
+      "proofOfFrontier": "証明",
+      "docs": "ドキュメント",
+      "enterWorld": "世界に入る",
+      "guardians": "ガーディアン"
+    },
+    "hero": {
+      "eyebrow": "NiceChunk Proof of Short Seed",
+      "title": "Proof of Short Seed",
+      "subtitle": "鉱山労働者は、現在の世界の輪郭の最短の有効なシードを見つけるために競い合います。",
+      "body": "NiceChunk マイナーは無意味なナンスを検索していません。 彼らは現在の世界の輪郭を再構築する Shape Seed を検索します。 より複雑な輪郭を短いシードで記述するのは難しくなります。 現在の難易度で十分に短いシードを最初に送信したマイナーがエポックを解決し、シミュレートされた報酬を獲得します。"
+    },
+    "concepts": {
+      "aria": "中心となる概念",
+      "boundary": {
+        "title": "フロンティアターゲット",
+        "body": "現在の世界の輪郭は target_frontier_root に正規化されます。"
+      },
+      "context": {
+        "title": "ショートシードマイニング",
+        "body": "マイナーは、現在の輪郭を再構成する短い Shape Seed を見つけるために競い合います。"
+      },
+      "meaningful": {
+        "title": "最初の有効な勝利",
+        "body": "エポックで受け入れられた最初の有効なシードが、シミュレートされたブロック報酬を獲得します。"
+      },
+      "tiny": {
+        "title": "自動リターゲット",
+        "body": "ブロックを 60 秒付近に保つように、max_seed_bytes 難易度が 1 分ごとに調整されます。"
+      }
+    },
+    "demo": {
+      "aria": "Proof of Short Seed デモ"
+    },
+    "grid": {
+      "eyebrow": "ワールドグリッド",
+      "title": "現在のフロンティアターゲット",
+      "legend": "地図の凡例",
+      "unlocked": "ロック解除",
+      "candidate": "候補者",
+      "selected": "選択済み",
+      "canvas": "Proof of Short Seed ワールド グリッド"
+    },
+    "steps": {
+      "genesis": "創世記 Chunk",
+      "find": "候補者を探す",
+      "select": "検索シード",
+      "mine": "検証",
+      "update": "エポックの解決"
+    },
+    "panel": {
+      "aria": "アルゴリズムの状態",
+      "selected": {
+        "title": "選択された Chunk",
+        "coords": "座標",
+        "status": "ステータス",
+        "neighbors": "ロック解除された隣人",
+        "reward": "推定報酬"
+      },
+      "seed": {
+        "title": "ショートシードマイニング",
+        "epoch": "現在のエポック",
+        "targetRoot": "ターゲット Frontier Root",
+        "maxSeedBytes": "最大シードバイト数",
+        "rawSeedBytes": "生のフォールバックバイト",
+        "candidateBytes": "シードバイト候補",
+        "lastCalculations": "最終結果の計算",
+        "currentEpochCalculations": "現在のエポックの計算",
+        "bestBytes": "最も承認されたシード バイト",
+        "blocksLastMinute": "直前のブロック",
+        "lastBlockAge": "最後のブロックの年齢",
+        "nextRetarget": "次のリターゲット",
+        "difficultyStatus": "難易度ステータス",
+        "stuckMinutes": "滞った時間",
+        "miningStatus": "採掘状況",
+        "status": "難易度ステータス"
+      },
+      "candidate": {
+        "title": "シード候補",
+        "encoding": "エンコーディング",
+        "decodedRoot": "デコードされたルート",
+        "rootValid": "ルート有効",
+        "lengthValid": "有効な長さ",
+        "canonical": "正規",
+        "seed": "Shape Seed"
+      },
+      "keys": {
+        "title": "ネイバーキー"
+      },
+      "context": {
+        "title": "近隣コンテキスト",
+        "note": "ロック解除された N/E/S/W Chunk キーから一定の順序で生成されます。"
+      },
+      "pow": {
+        "title": "作業証明",
+        "difficultyAria": "デモの難易度",
+        "easy": "簡単",
+        "normal": "ノーマル",
+        "hard": "ハード",
+        "nonce": "ノンス",
+        "target": "ターゲット",
+        "attempts": "試み",
+        "rate": "ハッシュレート",
+        "currentHash": "現在のハッシュ",
+        "status": "ステータス"
+      },
+      "newKey": {
+        "title": "新しい Chunk キー"
+      }
+    },
+    "actions": {
+      "randomMine": "ランダム鉱山",
+      "growWorld": "成長する世界",
+      "reset": "世界をリセット",
+      "startSearch": "検索を開始する",
+      "searchOne": "1 つの候補を検索",
+      "submitCandidate": "候補者を提出",
+      "autoRun": "自動実行",
+      "autoSolve": "自動解決",
+      "retargetNow": "今すぐターゲットを変更する",
+      "resetDifficulty": "難易度のリセット",
+      "startMining": "マイニングを開始する",
+      "stop": "停止",
+      "mineStep": "私の一歩",
+      "autoExpand": "自動展開",
+      "stopAuto": "自動停止",
+      "decodeSeed": "Contour Seed をデコードする",
+      "copySeed": "シードをコピーする",
+      "copyState": "状態 JSON のコピー",
+      "showLog": "トランザクションログを表示",
+      "hideLog": "トランザクションログを非表示にする"
+    },
+    "worldState": {
+      "title": "世界国家",
+      "unlocked": "ロック解除された chunks",
+      "candidates": "候補者 chunks",
+      "perimeter": "外周",
+      "frontierRoot": "Frontier Root",
+      "contourSeed": "Contour Seed",
+      "seedBytes": "シードバイト",
+      "seedAttempts": "シード検索の試行",
+      "avgBlockTime": "平均ブロック時間",
+      "nextRetarget": "次のリターゲット",
+      "nextRetargetValue": "{count} ブロック",
+      "seedTargetValue": "左端: 最大 {max} バイト / RAW {raw} バイト",
+      "difficulty": "現在の難易度"
+    },
+    "contour": {
+      "title": "輪郭エンコーディング",
+      "body": "DecodeShapeSeed v1 は、RAW_EDGES、PATH_RLE、および RECT をサポートします。 RAW_EDGES はフォールバックです。max_seed_bytes が生の長さに達すると、あらゆる有限輪郭は解決可能であることが保証されます。",
+      "path": "簡略化された輪郭パス",
+      "seed": "圧縮された Contour Seed",
+      "seedLength": "{bytes} バイト、ターゲット <= {target} バイト",
+      "pasteSeed": "Contour Seed を貼り付けてデコードします",
+      "pastePlaceholder": "ここに NSS1|RAW|...、NSS1|PATH|...、または NSS1|RECT|... を貼り付けます。"
+    },
+    "formulas": {
+      "eyebrow": "NPoSS 式",
+      "title": "seed_bytes <= max_seed_bytes",
+      "body": "デモは、シードが世界的に最も短いことを証明するものではありません。 これは、シードが現在の Frontier Root を再構築し、正規であり、現在の max_seed_bytes 難易度の下で十分に短いことを証明します。"
+    },
+    "advanced": {
+      "eyebrow": "高度なプロトコルに関する注意事項",
+      "title": "実稼働用のコミット公開",
+      "body": "デモでは直接公開するのが簡単です。 実稼働環境では、最初にコミットし、他のユーザーが有効なシードをコピーして最初に送信することを防ぐために、少し遅れてシードとソルトを公開する必要があります。"
+    },
+    "transactions": {
+      "eyebrow": "シミュレートされたトランザクション ログ",
+      "title": "SeedBlock イベント",
+      "empty": "シード ブロックはまだありません。 最初のエポックを解決するために有効なシードを検索して送信します。",
+      "nonce": "ノンス",
+      "powHash": "pow_hash",
+      "chunkKey": "chunk_key",
+      "frontierRoot": "フロンティアルート",
+      "blockTime": "ブロック時間",
+      "seedTarget": "シードターゲット"
+    },
+    "difficultyStatus": {
+      "hardening": "硬化",
+      "stable": "安定",
+      "relaxing": "リラックス",
+      "guaranteed_solvable": "解決可能性の保証"
+    },
+    "encoding": {
+      "RAW_EDGES": "RAW_EDGES",
+      "PATH_RLE": "PATH_RLE",
+      "RECT": "RECT",
+      "UNION": "UNION"
+    },
+    "directions": {
+      "north": "北",
+      "east": "東",
+      "south": "南",
+      "west": "西"
+    },
+    "chunkStatus": {
+      "locked": "ロック済み",
+      "candidate": "候補者",
+      "unlocked": "ロック解除"
+    },
+    "status": {
+      "idle": "アイドル",
+      "mining": "マイニング",
+      "searching": "検索",
+      "autoRunning": "自動実行: 有効なシードを検索して送信します。",
+      "stopped": "停止しました",
+      "valid": "有効なシードが見つかりました",
+      "noValidSeed": "現在の max_seed_bytes の下に有効なシードがありません。",
+      "noCandidate": "最初に候補シードを検索する",
+      "rootMismatch": "シードは現在のフロンティアを再構築しません。",
+      "nonCanonical": "シードは正規ではありません。",
+      "notCandidate": "最初に候補 chunk を選択します",
+      "seedTooLong": "シードは有効ですが、現在の難易度では長すぎます。",
+      "relaxed": "10分間ノーブロック。 シード長の目標が緩和されました。"
+    },
+    "messages": {
+      "locked": "この chunk にはロックされていない隣接ノードがありません。 フロンティア証明には、少なくとも 1 つの確認された隣接キーが必要です。",
+      "unlocked": "この chunk はすでにロックが解除されています。 そのキーは隣接する chunks で使用できるようになります。",
+      "candidate": "この chunk は、現在の世界のフロンティアに接しているため採掘できます。",
+      "decoded": "Contour Seed から {count} フロンティア エッジをデコードし、境界を強調表示しました。",
+      "invalidSeed": "この Contour Seed をデコードできませんでした。 有効な nckc_seed を貼り付けます。",
+      "seedCopied": "Contour Seed をコピーしました。",
+      "stateCopied": "世界状態 JSON がコピーされました。",
+      "copyFailed": "このブラウザのコンテキストではコピーに失敗しました。"
+    }
+  }
+}

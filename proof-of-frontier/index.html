@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en" data-i18n-scope="proofOfFrontier">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#081016" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=0.1.53" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=0.1.53" />
+    <link rel="shortcut icon" href="/favicon.ico?v=0.1.53" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=0.1.53" />
+    <link rel="manifest" href="/site.webmanifest?v=0.1.53" />
+    <meta name="description" content="Interactive NiceChunk Proof of Short Seed algorithm demo." />
+    <title data-i18n="proofOfFrontier.meta.title">Proof of Short Seed | NiceChunk</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="frontier-bg" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand-mark" href="/" aria-label="NiceChunk">
+        <img src="/media/nck.png" alt="" />
+        <span>NICECHUNK</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation" data-i18n-aria-label="proofOfFrontier.nav.aria">
+        <div class="nav-links">
+          <a href="/" data-i18n="proofOfFrontier.nav.home">Home</a>
+          <a href="/roadmap/" data-i18n="proofOfFrontier.nav.roadbook">Roadbook</a>
+          <a href="/world_rule/" data-i18n="proofOfFrontier.nav.worldRules">World Rules</a>
+          <a href="/resource_rule/" data-i18n="proofOfFrontier.nav.resources">Resources</a>
+          <a href="/elements/" data-i18n="proofOfFrontier.nav.elements">Elements</a>
+          <a href="/fairness/" data-i18n="proofOfFrontier.nav.fairness">Fairness</a>
+          <a class="active" href="/proof-of-frontier/" data-i18n="proofOfFrontier.nav.proofOfFrontier">Proof</a>
+          <a href="/guardian/" data-i18n="proofOfFrontier.nav.guardians">Guardians</a>
+          <a href="/docs/" data-i18n="proofOfFrontier.nav.docs">Docs</a>
+        </div>
+        <div class="nav-actions">
+          <a class="header-action" href="/play/" data-i18n="proofOfFrontier.nav.enterWorld">Enter World</a>
+          <div class="language-control" data-i18n-language-menu></div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="proof-shell">
+      <section class="hero-section" aria-labelledby="pageTitle">
+        <p class="eyebrow" data-i18n="proofOfFrontier.hero.eyebrow">NiceChunk Proof of Short Seed</p>
+        <h1 id="pageTitle" data-i18n="proofOfFrontier.hero.title">Proof of Short Seed</h1>
+        <p class="hero-subtitle" data-i18n="proofOfFrontier.hero.subtitle">
+          Miners compete to find the shortest valid seed for the current world contour.
+        </p>
+        <p class="hero-body" data-i18n="proofOfFrontier.hero.body">
+          Miners search for a Shape Seed that reconstructs the current Frontier Root under the accepted byte limit.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-action" type="button" id="randomMineButton" data-i18n="proofOfFrontier.actions.growWorld">Grow World</button>
+          <button class="secondary-action" type="button" id="resetButton" data-i18n="proofOfFrontier.actions.reset">Reset World</button>
+        </div>
+      </section>
+
+      <section class="concept-strip" aria-label="Core concepts" data-i18n-aria-label="proofOfFrontier.concepts.aria">
+        <article class="concept-card">
+          <span>01</span>
+          <h2 data-i18n="proofOfFrontier.concepts.boundary.title">Frontier Target</h2>
+          <p data-i18n="proofOfFrontier.concepts.boundary.body">Exploration can only move along the unlocked frontier.</p>
+        </article>
+        <article class="concept-card">
+          <span>02</span>
+          <h2 data-i18n="proofOfFrontier.concepts.context.title">Short Seed Mining</h2>
+          <p data-i18n="proofOfFrontier.concepts.context.body">The target chunk must read unlocked neighbor keys in fixed N/E/S/W order.</p>
+        </article>
+        <article class="concept-card">
+          <span>03</span>
+          <h2 data-i18n="proofOfFrontier.concepts.meaningful.title">First Valid Wins</h2>
+          <p data-i18n="proofOfFrontier.concepts.meaningful.body">Mining proves world expansion instead of calculating meaningless hashes.</p>
+        </article>
+        <article class="concept-card">
+          <span>04</span>
+          <h2 data-i18n="proofOfFrontier.concepts.tiny.title">Auto Retarget</h2>
+          <p data-i18n="proofOfFrontier.concepts.tiny.body">The world contour can be encoded into a small reversible Contour Seed.</p>
+        </article>
+      </section>
+
+      <section class="demo-layout" aria-label="Proof of Frontier demo" data-i18n-aria-label="proofOfFrontier.demo.aria">
+        <div class="world-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow" data-i18n="proofOfFrontier.grid.eyebrow">World Grid</p>
+              <h2 data-i18n="proofOfFrontier.grid.title">Current Frontier Target</h2>
+            </div>
+            <div class="legend" aria-label="Map legend" data-i18n-aria-label="proofOfFrontier.grid.legend">
+              <span><i class="legend-unlocked"></i><b data-i18n="proofOfFrontier.grid.unlocked">Unlocked</b></span>
+              <span><i class="legend-candidate"></i><b data-i18n="proofOfFrontier.grid.candidate">Candidate</b></span>
+              <span><i class="legend-selected"></i><b data-i18n="proofOfFrontier.grid.selected">Selected</b></span>
+            </div>
+          </div>
+          <canvas id="worldCanvas" width="980" height="980" aria-label="Proof of Frontier world grid" data-i18n-aria-label="proofOfFrontier.grid.canvas"></canvas>
+          <div class="step-row">
+            <div class="step active" data-step="1"><span>1</span><b data-i18n="proofOfFrontier.steps.genesis">Genesis Chunk</b></div>
+            <div class="step" data-step="2"><span>2</span><b data-i18n="proofOfFrontier.steps.find">Find Candidates</b></div>
+            <div class="step" data-step="3"><span>3</span><b data-i18n="proofOfFrontier.steps.select">Search Seed</b></div>
+            <div class="step" data-step="4"><span>4</span><b data-i18n="proofOfFrontier.steps.mine">Validate</b></div>
+            <div class="step" data-step="5"><span>5</span><b data-i18n="proofOfFrontier.steps.update">Solve Epoch</b></div>
+          </div>
+          <p class="status-message" id="selectionMessage" data-i18n="proofOfFrontier.messages.candidate">
+            This chunk can be mined because it touches the current world frontier.
+          </p>
+        </div>
+
+        <aside class="algorithm-panel" aria-label="Algorithm state" data-i18n-aria-label="proofOfFrontier.panel.aria">
+          <section class="state-card">
+            <h2 data-i18n="proofOfFrontier.panel.selected.title">Selected Chunk</h2>
+            <dl class="metric-grid">
+              <div><dt data-i18n="proofOfFrontier.panel.selected.coords">Coordinates</dt><dd id="selectedCoords">-</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.selected.status">Status</dt><dd id="selectedStatus">-</dd></div>
+            </dl>
+          </section>
+
+          <section class="state-card">
+            <h2 data-i18n="proofOfFrontier.panel.seed.title">Short Seed Mining</h2>
+            <dl class="metric-grid">
+              <div><dt data-i18n="proofOfFrontier.panel.seed.epoch">Current Epoch</dt><dd id="currentEpoch">1</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.maxSeedBytes">Max Seed Bytes</dt><dd id="maxSeedBytes">-</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.rawSeedBytes">Raw Fallback Bytes</dt><dd id="rawSeedBytes">-</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.candidateBytes">Candidate Seed Bytes</dt><dd id="candidateSeedBytes">-</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.lastCalculations">Last Result Calculations</dt><dd id="lastCalculationCount">0</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.currentEpochCalculations">Current Epoch Calculations</dt><dd id="currentEpochCalculationCount">0</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.bestBytes">Best Accepted Seed Bytes</dt><dd id="bestAcceptedSeedBytes">-</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.blocksLastMinute">Blocks In Last Minute</dt><dd id="blocksInLastMinute">0</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.lastBlockAge">Last Block Age</dt><dd id="lastBlockAge">-</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.nextRetarget">Next Retarget In</dt><dd id="nextRetargetIn">60s</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.stuckMinutes">Stuck Minutes</dt><dd id="stuckMinutes">0</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.seed.status">Difficulty Status</dt><dd id="difficultyStatus">Stable</dd></div>
+            </dl>
+            <div class="difficulty-meter" aria-hidden="true">
+              <div class="difficulty-meter-fill" id="difficultyMeterFill"></div>
+              <span id="difficultyMeterText">seed_bytes &lt;= max_seed_bytes</span>
+            </div>
+            <div class="hash-readout"><span data-i18n="proofOfFrontier.panel.seed.targetRoot">Target Frontier Root</span><code id="targetFrontierRoot">-</code></div>
+            <div class="hash-readout"><span data-i18n="proofOfFrontier.panel.seed.miningStatus">Mining Status</span><strong id="seedMiningStatus" data-i18n="proofOfFrontier.status.idle">Idle</strong></div>
+            <div class="button-grid">
+              <button type="button" id="startSearchButton" data-i18n="proofOfFrontier.actions.startSearch">Start Searching</button>
+              <button type="button" id="stopButton" data-i18n="proofOfFrontier.actions.stop">Stop</button>
+              <button type="button" id="searchOneButton" data-i18n="proofOfFrontier.actions.searchOne">Search One Candidate</button>
+              <button type="button" id="submitCandidateButton" data-i18n="proofOfFrontier.actions.submitCandidate">Submit Candidate</button>
+              <button type="button" id="autoRunButton" data-i18n="proofOfFrontier.actions.autoRun">Auto Run</button>
+              <button type="button" id="autoSolveButton" data-i18n="proofOfFrontier.actions.autoSolve">Auto Solve</button>
+              <button type="button" id="retargetNowButton" data-i18n="proofOfFrontier.actions.retargetNow">Retarget Now</button>
+              <button type="button" id="resetDifficultyButton" data-i18n="proofOfFrontier.actions.resetDifficulty">Reset Difficulty</button>
+            </div>
+          </section>
+
+          <section class="state-card">
+            <h2 data-i18n="proofOfFrontier.panel.candidate.title">Candidate Seed</h2>
+            <dl class="metric-grid">
+              <div><dt data-i18n="proofOfFrontier.panel.candidate.encoding">Encoding</dt><dd id="candidateEncoding">-</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.candidate.rootValid">Root Valid</dt><dd id="candidateRootValid">-</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.candidate.lengthValid">Length Valid</dt><dd id="candidateLengthValid">-</dd></div>
+              <div><dt data-i18n="proofOfFrontier.panel.candidate.canonical">Canonical</dt><dd id="candidateCanonical">-</dd></div>
+            </dl>
+            <div class="hash-readout"><span data-i18n="proofOfFrontier.panel.candidate.decodedRoot">Decoded Root</span><code id="candidateDecodedRoot">-</code></div>
+            <div class="hash-readout"><span data-i18n="proofOfFrontier.panel.candidate.seed">Shape Seed</span><code id="candidateSeed">-</code></div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="state-layout">
+        <div class="state-card world-state-card">
+          <h2 data-i18n="proofOfFrontier.worldState.title">World State</h2>
+          <dl class="metric-grid wide">
+            <div><dt data-i18n="proofOfFrontier.worldState.unlocked">Unlocked chunks</dt><dd id="unlockedCount">1</dd></div>
+            <div><dt data-i18n="proofOfFrontier.worldState.candidates">Candidate chunks</dt><dd id="candidateCount">4</dd></div>
+            <div><dt data-i18n="proofOfFrontier.worldState.perimeter">Perimeter</dt><dd id="perimeterValue">4</dd></div>
+            <div><dt data-i18n="proofOfFrontier.worldState.frontierRoot">Frontier Root</dt><dd><code id="frontierRoot">-</code></dd></div>
+            <div><dt data-i18n="proofOfFrontier.worldState.contourSeed">Contour Seed</dt><dd><code id="contourSeedShort">-</code></dd></div>
+          </dl>
+          <div class="button-row">
+            <button type="button" id="copyStateButton" data-i18n="proofOfFrontier.actions.copyState">Copy State JSON</button>
+          </div>
+        </div>
+
+        <div class="state-card contour-card">
+          <h2 data-i18n="proofOfFrontier.contour.title">Contour Encoding</h2>
+          <p data-i18n="proofOfFrontier.contour.body">
+            Demo uses readable reversible edge encoding. Production can replace it with compact binary path encoding.
+          </p>
+          <div class="contour-box">
+            <span data-i18n="proofOfFrontier.contour.path">Simplified contour path</span>
+            <code id="contourPath">START(0,0)</code>
+          </div>
+          <div class="contour-box">
+            <span data-i18n="proofOfFrontier.contour.seed">Compressed Contour Seed</span>
+            <code id="contourSeedFull">-</code>
+            <small id="contourSeedLength">-</small>
+          </div>
+          <label class="contour-input-wrap" for="contourSeedInput">
+            <span data-i18n="proofOfFrontier.contour.pasteSeed">Paste Contour Seed to decode</span>
+            <textarea
+              id="contourSeedInput"
+              rows="3"
+              spellcheck="false"
+              data-i18n-placeholder="proofOfFrontier.contour.pastePlaceholder"
+              data-i18n-aria-label="proofOfFrontier.contour.pasteSeed"
+            ></textarea>
+          </label>
+          <div class="button-row">
+            <button type="button" id="decodeSeedButton" data-i18n="proofOfFrontier.actions.decodeSeed">Decode Contour Seed</button>
+            <button type="button" id="copySeedButton" data-i18n="proofOfFrontier.actions.copySeed">Copy Seed</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="formula-section" aria-labelledby="formulaTitle">
+        <div>
+          <p class="eyebrow" data-i18n="proofOfFrontier.formulas.eyebrow">NPoSS Formula</p>
+            <h2 id="formulaTitle" data-i18n="proofOfFrontier.formulas.title">seed_bytes &lt;= max_seed_bytes</h2>
+          <p data-i18n="proofOfFrontier.formulas.body">
+            Contour Seed compresses the frontier. Hash Target only validates proof difficulty.
+          </p>
+        </div>
+        <pre><code>target_frontier_root = SHA256(CanonicalSort(ComputeFrontierEdges(unlocked_chunks)))
+
+decoded_edges = DecodeShapeSeed(shape_seed)
+
+decoded_root = SHA256(CanonicalSort(decoded_edges))
+
+valid_seed =
+  decoded_root == target_frontier_root &&
+  byteLength(shape_seed) &lt;= max_seed_bytes
+
+first_valid_submission wins the epoch reward
+
+difficulty = max_seed_bytes
+
+if blocks are too fast: max_seed_bytes decreases
+if no block is solved: max_seed_bytes increases
+if max_seed_bytes &gt;= raw_seed_bytes: RAW fallback guarantees solvability</code></pre>
+      </section>
+
+      <section class="formula-section" aria-labelledby="advancedTitle">
+        <div>
+          <p class="eyebrow" data-i18n="proofOfFrontier.advanced.eyebrow">Advanced Protocol Note</p>
+          <h2 id="advancedTitle" data-i18n="proofOfFrontier.advanced.title">Commit-reveal for production</h2>
+          <p data-i18n="proofOfFrontier.advanced.body">
+            The demo reveals seeds directly. Production should commit first, then reveal seed and salt after a short delay.
+          </p>
+        </div>
+        <pre><code>commit_hash = SHA256(seed | salt | miner | target_frontier_root | epoch)
+
+1. submit commit_hash
+2. wait for reveal window
+3. reveal seed and salt
+4. verify DecodeShapeSeed(seed) and seed_bytes &lt;= max_seed_bytes</code></pre>
+      </section>
+
+      <section class="transaction-section" aria-labelledby="transactionTitle">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow" data-i18n="proofOfFrontier.transactions.eyebrow">Simulated Transaction Log</p>
+            <h2 id="transactionTitle" data-i18n="proofOfFrontier.transactions.title">SeedBlock Events</h2>
+          </div>
+          <button type="button" id="toggleLogButton" data-i18n="proofOfFrontier.actions.showLog">Show Transaction Log</button>
+        </div>
+        <div class="transaction-log" id="transactionLog"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./proof-of-frontier.js"></script>
+  </body>
+</html>
