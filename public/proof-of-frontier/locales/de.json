@@ -1,0 +1,279 @@
+{
+  "_meta": {
+    "language": "de",
+    "label": "German",
+    "version": "proof-of-frontier-locale-de-2cb3e84bac033283",
+    "contentHash": "2cb3e84bac033283"
+  },
+  "siteFooter": {
+    "tagline": "Ein Seed-Voxelwelt-Protokoll auf Solana.",
+    "navigationAria": "Footer-Navigation",
+    "socialAria": "NiceChunk Social Links",
+    "home": "Home",
+    "play": "Welt betreten",
+    "roadmap": "Roadbook",
+    "docs": "Docs",
+    "guardian": "Guardians",
+    "contracts": "Contracts",
+    "x": "X / Twitter",
+    "github": "GitHub",
+    "copyright": "2026 NiceChunk. Alle Rechte vorbehalten."
+  },
+  "common": {
+    "brand": "NICECHUNK",
+    "language": "Sprache",
+    "languageNative": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "de": "Deutsch",
+      "ja": "日本語",
+      "ru": "Русский",
+      "ko": "한국어",
+      "zhHant": "繁體中文",
+      "zhHans": "简体中文"
+    },
+    "comingSoon": "Demnächst erhältlich"
+  },
+  "proofOfFrontier": {
+    "meta": {
+      "title": "Proof of Short Seed | NiceChunk"
+    },
+    "common": {
+      "yes": "Ja",
+      "no": "Nr"
+    },
+    "nav": {
+      "aria": "Primäre Navigation",
+      "home": "Startseite",
+      "roadbook": "Roadbook",
+      "worldRules": "Weltregeln",
+      "resources": "Ressourcen",
+      "elements": "Elemente",
+      "fairness": "Fairness",
+      "proofOfFrontier": "Beweis",
+      "docs": "Dokumente",
+      "enterWorld": "Betritt die Welt",
+      "guardians": "Wächter"
+    },
+    "hero": {
+      "eyebrow": "NiceChunk Proof of Short Seed",
+      "title": "Proof of Short Seed",
+      "subtitle": "Bergleute konkurrieren darum, den kürzesten gültigen Seed für die aktuelle Weltkontur zu finden.",
+      "body": "NiceChunk-Miner suchen nicht nach bedeutungslosen Nonces. Sie suchen nach einem Shape Seed, der die aktuelle Weltkontur rekonstruiert. Komplexere Konturen sind mit einem kurzen Seed schwieriger zu beschreiben. Der erste Miner, der einen Seed einreicht, der für den aktuellen Schwierigkeitsgrad kurz genug ist, löst die Epoche und erhält die simulierte Belohnung."
+    },
+    "concepts": {
+      "aria": "Kernkonzepte",
+      "boundary": {
+        "title": "Grenzziel",
+        "body": "Die aktuelle Weltkontur wird in target_frontier_root kanonisiert."
+      },
+      "context": {
+        "title": "Kurzes Seed-Mining",
+        "body": "Bergleute konkurrieren darum, einen kurzen Shape Seed zu finden, der die aktuelle Kontur rekonstruiert."
+      },
+      "meaningful": {
+        "title": "Erste gültige Gewinne",
+        "body": "Der erste gültige Seed, der für die Epoche akzeptiert wird, gewinnt die simulierte Blockbelohnung."
+      },
+      "tiny": {
+        "title": "Automatisches Retargeting",
+        "body": "Jede Minute wird der Schwierigkeitsgrad „max_seed_bytes“ angepasst, um die Blöcke bei etwa 60 Sekunden zu halten."
+      }
+    },
+    "demo": {
+      "aria": "Proof of Short Seed-Demo"
+    },
+    "grid": {
+      "eyebrow": "Weltgitter",
+      "title": "Aktuelles Grenzziel",
+      "legend": "Kartenlegende",
+      "unlocked": "Entsperrt",
+      "candidate": "Kandidat",
+      "selected": "Ausgewählt",
+      "canvas": "Proof of Short Seed Weltgitter"
+    },
+    "steps": {
+      "genesis": "Genesis Chunk",
+      "find": "Kandidaten finden",
+      "select": "Suchsamen",
+      "mine": "Validieren",
+      "update": "Epoche lösen"
+    },
+    "panel": {
+      "aria": "Algorithmuszustand",
+      "selected": {
+        "title": "Ausgewählte Chunk",
+        "coords": "Koordinaten",
+        "status": "Status",
+        "neighbors": "Entsperrte Nachbarn",
+        "reward": "Geschätzte Belohnung"
+      },
+      "seed": {
+        "title": "Kurzes Seed-Mining",
+        "epoch": "Aktuelle Epoche",
+        "targetRoot": "Ziel Frontier Root",
+        "maxSeedBytes": "Max. Seed-Bytes",
+        "rawSeedBytes": "Rohe Fallback-Bytes",
+        "candidateBytes": "Kandidaten-Seed-Bytes",
+        "lastCalculations": "Letzte Ergebnisberechnungen",
+        "currentEpochCalculations": "Aktuelle Epochenberechnungen",
+        "bestBytes": "Beste akzeptierte Seed-Bytes",
+        "blocksLastMinute": "Blockiert in letzter Minute",
+        "lastBlockAge": "Letztes Blockalter",
+        "nextRetarget": "Nächstes Retargeting",
+        "difficultyStatus": "Schwierigkeitsstatus",
+        "stuckMinutes": "Blockiertes Protokoll",
+        "miningStatus": "Bergbaustatus",
+        "status": "Schwierigkeitsstatus"
+      },
+      "candidate": {
+        "title": "Kandidatensamen",
+        "encoding": "Kodierung",
+        "decodedRoot": "Entschlüsselte Wurzel",
+        "rootValid": "Root Gültig",
+        "lengthValid": "Länge gültig",
+        "canonical": "Kanonisch",
+        "seed": "Shape Seed"
+      },
+      "keys": {
+        "title": "Nachbarschlüssel"
+      },
+      "context": {
+        "title": "Nachbarkontext",
+        "note": "Wird aus entsperrten N/E/S/W Chunk-Schlüsseln in einer festen Reihenfolge generiert."
+      },
+      "pow": {
+        "title": "Arbeitsnachweis",
+        "difficultyAria": "Demo-Schwierigkeitsgrad",
+        "easy": "Einfach",
+        "normal": "Normal",
+        "hard": "Schwer",
+        "nonce": "Nonce",
+        "target": "Ziel",
+        "attempts": "Versuche",
+        "rate": "Hash-Rate",
+        "currentHash": "Aktueller Hash",
+        "status": "Status"
+      },
+      "newKey": {
+        "title": "Neuer Chunk-Schlüssel"
+      }
+    },
+    "actions": {
+      "randomMine": "Zufällige Mine",
+      "growWorld": "Grow World",
+      "reset": "Welt zurücksetzen",
+      "startSearch": "Suche starten",
+      "searchOne": "Einen Kandidaten suchen",
+      "submitCandidate": "Kandidaten einreichen",
+      "autoRun": "Autostart",
+      "autoSolve": "Automatisch lösen",
+      "retargetNow": "Jetzt neu ausrichten",
+      "resetDifficulty": "Schwierigkeit zurücksetzen",
+      "startMining": "Beginnen Sie mit dem Mining",
+      "stop": "Stopp",
+      "mineStep": "Meiner ein Schritt",
+      "autoExpand": "Automatisch erweitern",
+      "stopAuto": "Auto stoppen",
+      "decodeSeed": "Contour Seed dekodieren",
+      "copySeed": "Samen kopieren",
+      "copyState": "Status-JSON kopieren",
+      "showLog": "Transaktionsprotokoll anzeigen",
+      "hideLog": "Transaktionsprotokoll ausblenden"
+    },
+    "worldState": {
+      "title": "Weltstaat",
+      "unlocked": "Entsperrt chunks",
+      "candidates": "Kandidat chunks",
+      "perimeter": "Umfang",
+      "frontierRoot": "Frontier Root",
+      "contourSeed": "Contour Seed",
+      "seedBytes": "Seed-Bytes",
+      "seedAttempts": "Seed-Suchversuche",
+      "avgBlockTime": "Durchschnittliche Blockzeit",
+      "nextRetarget": "Nächstes Retargeting",
+      "nextRetargetValue": "{count}-Blöcke",
+      "seedTargetValue": "Härter links: max. {max} Bytes / RAW {raw} Bytes",
+      "difficulty": "Aktueller Schwierigkeitsgrad"
+    },
+    "contour": {
+      "title": "Konturkodierung",
+      "body": "DecodeShapeSeed v1 unterstützt RAW_EDGES, PATH_RLE und RECT. RAW_EDGES ist der Fallback: Sobald max_seed_bytes die Rohlänge erreicht, ist jede endliche Kontur garantiert lösbar.",
+      "path": "Vereinfachter Konturpfad",
+      "seed": "Komprimiertes Contour Seed",
+      "seedLength": "{bytes} Bytes, Ziel <= {target} Bytes",
+      "pasteSeed": "Fügen Sie Contour Seed zum Dekodieren ein",
+      "pastePlaceholder": "Fügen Sie NSS1|RAW|..., NSS1|PATH|... oder NSS1|RECT|... hier ein."
+    },
+    "formulas": {
+      "eyebrow": "NPoSS-Formel",
+      "title": "Seed_bytes <= max_seed_bytes",
+      "body": "Die Demo beweist nicht, dass ein Startwert weltweit am kürzesten ist. Es beweist, dass der Seed das aktuelle Frontier Root rekonstruiert, kanonisch ist und unter dem aktuellen Schwierigkeitsgrad max_seed_bytes kurz genug ist."
+    },
+    "advanced": {
+      "eyebrow": "Erweiterter Protokollhinweis",
+      "title": "Commit-Reveal für die Produktion",
+      "body": "Die direkte Enthüllung ist für die Demo einfach. Die Produktion sollte zuerst festgeschrieben werden und dann nach einer kurzen Verzögerung Saatgut und Salz offenlegen, um zu verhindern, dass ein anderer Benutzer ein gültiges Saatgut kopiert und zuerst einreicht."
+    },
+    "transactions": {
+      "eyebrow": "Simuliertes Transaktionsprotokoll",
+      "title": "SeedBlock Ereignisse",
+      "empty": "Noch keine Seed-Blöcke. Suchen und übermitteln Sie einen gültigen Seed, um die erste Epoche zu lösen.",
+      "nonce": "Nonce",
+      "powHash": "pow_hash",
+      "chunkKey": "chunk_key",
+      "frontierRoot": "frontier_root",
+      "blockTime": "block_time",
+      "seedTarget": "Seed_target"
+    },
+    "difficultyStatus": {
+      "hardening": "Härten",
+      "stable": "Stabil",
+      "relaxing": "Entspannend",
+      "guaranteed_solvable": "Garantiert lösbar"
+    },
+    "encoding": {
+      "RAW_EDGES": "RAW_EDGES",
+      "PATH_RLE": "PATH_RLE",
+      "RECT": "RECT",
+      "UNION": "UNION"
+    },
+    "directions": {
+      "north": "Norden",
+      "east": "Osten",
+      "south": "Süden",
+      "west": "Westen"
+    },
+    "chunkStatus": {
+      "locked": "Gesperrt",
+      "candidate": "Kandidat",
+      "unlocked": "Entsperrt"
+    },
+    "status": {
+      "idle": "Leerlauf",
+      "mining": "Bergbau",
+      "searching": "Suchen",
+      "autoRunning": "Automatische Ausführung: Suche und Übermittlung gültiger Seeds.",
+      "stopped": "Gestoppt",
+      "valid": "Gültiger Seed gefunden",
+      "noValidSeed": "Kein gültiger Seed unter den aktuellen max_seed_bytes.",
+      "noCandidate": "Suchen Sie zuerst nach einem Kandidaten-Seed",
+      "rootMismatch": "Seed rekonstruiert nicht die aktuelle Grenze.",
+      "nonCanonical": "Samen ist nicht kanonisch.",
+      "notCandidate": "Wählen Sie zunächst einen Kandidaten chunk aus",
+      "seedTooLong": "Seed ist gültig, aber zu lang für den aktuellen Schwierigkeitsgrad.",
+      "relaxed": "Keine Sperre für 10 Minuten. Zielvorgabe für die Saatlänge gelockert."
+    },
+    "messages": {
+      "locked": "Dieses chunk hat keine freigeschalteten Nachbarn. Für den Grenznachweis ist mindestens ein bestätigter Nachbarschlüssel erforderlich.",
+      "unlocked": "Dieses chunk ist bereits freigeschaltet. Sein Schlüssel kann jetzt vom benachbarten chunks verwendet werden.",
+      "candidate": "Dieser chunk kann abgebaut werden, da er die aktuelle Weltgrenze berührt.",
+      "decoded": "{count}-Grenzkanten aus Contour Seed dekodiert und die Grenze hervorgehoben.",
+      "invalidSeed": "Dieses Contour Seed konnte nicht dekodiert werden. Fügen Sie einen gültigen NCKc_-Seed ein.",
+      "seedCopied": "Contour Seed kopiert.",
+      "stateCopied": "Weltstaat JSON kopiert.",
+      "copyFailed": "Das Kopieren ist in diesem Browserkontext fehlgeschlagen."
+    }
+  }
+}
