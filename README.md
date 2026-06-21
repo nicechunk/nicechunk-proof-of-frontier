@@ -22,6 +22,14 @@ The frontier root is the compact global statement: canonicalized perimeter edges
 
 This repository should stay precise about its status. It is a reference implementation for reasoning about expansion, byte targets, retargeting, and shape encodings. It is not yet a production security claim.
 
+## Candidate Validation Flow
+
+![Candidate validation flow](docs/diagrams/candidate-validation-flow.svg)
+
+A frontier candidate should fail early unless it is locally connected to the unlocked graph. The validation path starts with coordinates and explicit neighbor keys. Missing neighbors are not hidden; they are represented as `EMPTY` so the neighbor context hash is deterministic and replayable.
+
+Only after that local context exists does the proof hash matter. The nonce search commits to the world seed, candidate coordinate, neighbor context, miner address, and versioned proof domain. A valid hash unlocks the chunk key, then the graph is recomputed into frontier edges, a root, contour seed candidates, and difficulty state. That order keeps the algorithm understandable enough to test before it becomes a production claim.
+
 ## System Principles
 
 - Proof logic should be deterministic and replayable.
