@@ -12,6 +12,16 @@ The project is currently a reference and explanation surface rather than a final
 
 The code and page are kept together so algorithm changes can be explained with visible examples.
 
+## Frontier Cycle
+
+![Proof of Frontier cycle](docs/diagrams/frontier-proof-cycle.svg)
+
+Proof of Frontier treats world growth as a graph problem with cryptographic checkpoints. An unlocked chunk exposes perimeter edges. Adjacent locked chunks become candidates. A candidate proof commits to the world seed, coordinates, neighbor context, miner address, and nonce, then derives a chunk key from the accepted proof hash.
+
+The frontier root is the compact global statement: canonicalized perimeter edges hashed into a value that can be compared between systems. The contour seed is the transport problem: describe the same frontier shape in fewer bytes without changing the root. That is why the implementation includes RAW, RECT, PATH_RLE, and UNION-style seed candidates.
+
+This repository should stay precise about its status. It is a reference implementation for reasoning about expansion, byte targets, retargeting, and shape encodings. It is not yet a production security claim.
+
 ## System Principles
 
 - Proof logic should be deterministic and replayable.

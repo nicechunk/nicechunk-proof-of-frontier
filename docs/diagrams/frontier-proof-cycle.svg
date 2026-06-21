@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Proof of Frontier cycle</title>
+  <desc id="desc">A diagram showing how unlocked chunks create frontier candidates, neighbor context, proof of work, chunk keys, frontier roots, and compact contour seeds.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070d14"/>
+      <stop offset="1" stop-color="#13160d"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#8fdcff"/>
+    </marker>
+    <style>
+      .label{font:800 12px Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.16em;fill:#90ff1a}
+      .title{font:850 42px Inter,ui-sans-serif,system-ui,sans-serif;fill:#f3f8ff}
+      .copy{font:500 17px Inter,ui-sans-serif,system-ui,sans-serif;fill:#b8c7d4}
+      .node{fill:rgba(255,255,255,.06);stroke:rgba(255,255,255,.16);stroke-width:1.2;rx:20}
+      .head{font:800 18px Inter,ui-sans-serif,system-ui,sans-serif;fill:#f3f8ff}
+      .small{font:600 13px Inter,ui-sans-serif,system-ui,sans-serif;fill:#bdd0df}
+      .mono{font:750 13px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#f7d98f}
+      .line{stroke:#8fdcff;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="638" cy="398" r="246" fill="none" stroke="rgba(143,220,255,.28)" stroke-width="18"/>
+  <circle cx="190" cy="134" r="248" fill="#00c2ff" opacity=".07"/>
+  <circle cx="1050" cy="606" r="284" fill="#83ff00" opacity=".07"/>
+  <text x="70" y="78" class="label">PROOF OF FRONTIER</text>
+  <text x="70" y="132" class="title">Growth is local, but the frontier root is global.</text>
+  <text x="70" y="168" class="copy">Each chunk unlock depends on neighboring keys, proof of work, and a compact description of the visible contour.</text>
+
+  <g transform="translate(508 238)">
+    <rect class="node" width="264" height="112"/>
+    <text x="24" y="42" class="head">Unlocked chunks</text>
+    <text x="24" y="74" class="small">existing cells with keys</text>
+  </g>
+  <g transform="translate(810 308)">
+    <rect class="node" width="264" height="112"/>
+    <text x="24" y="42" class="head">Candidate edge</text>
+    <text x="24" y="74" class="small">requires at least one neighbor</text>
+  </g>
+  <g transform="translate(724 500)">
+    <rect class="node" width="286" height="112"/>
+    <text x="24" y="42" class="head">PoW and chunk key</text>
+    <text x="24" y="74" class="mono">NCK_CHUNK_POW_V1</text>
+  </g>
+  <g transform="translate(270 500)">
+    <rect class="node" width="286" height="112"/>
+    <text x="24" y="42" class="head">Frontier root</text>
+    <text x="24" y="74" class="small">canonicalized perimeter edges</text>
+  </g>
+  <g transform="translate(188 308)">
+    <rect class="node" width="264" height="112"/>
+    <text x="24" y="42" class="head">Contour seed</text>
+    <text x="24" y="74" class="small">RAW, RECT, PATH_RLE, UNION</text>
+  </g>
+  <g transform="translate(526 374)">
+    <rect class="node" width="228" height="112"/>
+    <text x="38" y="42" class="head">Difficulty</text>
+    <text x="38" y="74" class="small">byte target retargets</text>
+  </g>
+
+  <path class="line" d="M772 294 C832 294 858 304 896 322"/>
+  <path class="line" d="M942 420 C952 464 934 490 902 504"/>
+  <path class="line" d="M724 558 H576"/>
+  <path class="line" d="M356 500 C314 466 294 440 284 420"/>
+  <path class="line" d="M452 330 C494 302 526 292 552 292"/>
+  <path class="line" d="M454 374 C486 398 510 420 530 444"/>
+  <path class="line" d="M812 366 C748 390 714 418 690 444"/>
+</svg>
