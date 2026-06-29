@@ -4,6 +4,12 @@
 
 Reference implementation and explanation for frontier-style proof logic.
 
+## Official Links
+
+GitHub: [https://github.com/nicechunk/nicechunk-proof-of-frontier](https://github.com/nicechunk/nicechunk-proof-of-frontier)
+
+Website: [https://nicechunk.com/proof-of-frontier/](https://nicechunk.com/proof-of-frontier/)
+
 ## Project Overview
 
 This repository contains the Proof of Frontier reference page and TypeScript implementation. It explores how a player or system can reason about frontier discovery and verifiable expansion in a generated world.
